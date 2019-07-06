@@ -1,6 +1,5 @@
-package com.andrei.multithead.section1;
+package com.andrei.multithead.section2;
 
-import java.time.temporal.ValueRange;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -11,7 +10,7 @@ public static final int MAX_PASSWORD = 9999;
         Random random = new Random();
 
         Vault vault = new Vault(random.nextInt(MAX_PASSWORD));
-        List<Thread> threads = new ArrayList<>();
+        List<Thread> threads = new ArrayList<Thread>();
 
         threads.add(new AscendingHackerThread(vault));
         threads.add(new DescendingHackerThread(vault));
